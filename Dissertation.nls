@@ -1,0 +1,10 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{LPS}]\begingroup Lipopolysaccharide\nomeqref {1.0}
+		\nompageref{5}
+  \item [{PBS}]\begingroup Phosphat buffered saline\nomeqref {2.0}
+		\nompageref{7}
+
+\end{thenomenclature}
