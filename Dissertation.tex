@@ -106,6 +106,14 @@
 	\ihead[\rightmark]{\rightmark} \chead[]{}
 	\automark{chapter}
 	\renewcommand{\chaptermark}[1]{\markright{\ #1}}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Eigener Pagestyle für PDFs
+
+	\usepackage{titleps}
+	\newpagestyle{pdf}{
+		\setfoot{}{\usepage}{}
+	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Inhaltsverzeichnis Einstellungen
@@ -118,12 +126,10 @@
 
 \begin{document}
 
-
 	\includepdf{Titelseite.pdf}
-	\includepdf{ZweiteSeite.pdf}
-	\includepdf{Publikationen.pdf}
+	\includepdf[pagecommand={\thispagestyle{pdf}}]{ZweiteSeite.pdf}
+	\includepdf[pagecommand={\thispagestyle{pdf}}]{Publikationen.pdf}
 	\tableofcontents
-
 	
 	\chapter{Introduction}
 		Write your introduction here. Zitation \citep{Lesley2004}
